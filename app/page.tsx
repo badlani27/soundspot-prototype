@@ -49,8 +49,8 @@ export default function Home() {
               <div className="bg-primary-500 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
                 <Video className="h-6 w-6 text-white" />
               </div>
-              <h3 className="text-xl font-bold mb-2">Live Interactive Concerts</h3>
-              <p className="text-gray-600">
+              <h3 className="text-xl font-bold mb-2 text-black">Live Interactive Concerts</h3>
+              <p className="text-black">
                 Join intimate live sessions with real-time reactions, polls, and dynamic visual effects.
                 Your participation shapes the show.
               </p>
@@ -59,8 +59,8 @@ export default function Home() {
               <div className="bg-accent-500 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
                 <MessageCircle className="h-6 w-6 text-white" />
               </div>
-              <h3 className="text-xl font-bold mb-2">Artist-Fan Communities</h3>
-              <p className="text-gray-600">
+              <h3 className="text-xl font-bold mb-2 text-black">Artist-Fan Communities</h3>
+              <p className="text-black">
                 Connect directly with artists through exclusive chats, behind-the-scenes content,
                 and voice notes. Build real relationships.
               </p>
@@ -69,8 +69,8 @@ export default function Home() {
               <div className="bg-purple-500 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
                 <Sparkles className="h-6 w-6 text-white" />
               </div>
-              <h3 className="text-xl font-bold mb-2">Exclusive Content</h3>
-              <p className="text-gray-600">
+              <h3 className="text-xl font-bold mb-2 text-black">Exclusive Content</h3>
+              <p className="text-black">
                 Access demos, voice notes, lyric books, and early releases. Get the content
                 that makes you feel like part of the creative process.
               </p>
@@ -79,8 +79,8 @@ export default function Home() {
               <div className="bg-pink-500 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
                 <Heart className="h-6 w-6 text-white" />
               </div>
-              <h3 className="text-xl font-bold mb-2">Fan Badges & Achievements</h3>
-              <p className="text-gray-600">
+              <h3 className="text-xl font-bold mb-2 text-black">Fan Badges & Achievements</h3>
+              <p className="text-black">
                 Show off your loyalty with badges, unlock achievements, and level up your
                 fandom status in the community.
               </p>
@@ -89,8 +89,8 @@ export default function Home() {
               <div className="bg-blue-500 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
                 <Users className="h-6 w-6 text-white" />
               </div>
-              <h3 className="text-xl font-bold mb-2">Fan-to-Fan Connections</h3>
-              <p className="text-gray-600">
+              <h3 className="text-xl font-bold mb-2 text-black">Fan-to-Fan Connections</h3>
+              <p className="text-black">
                 Meet other superfans, join artist communities, and share your passion with
                 people who get it.
               </p>
@@ -99,8 +99,8 @@ export default function Home() {
               <div className="bg-green-500 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
                 <TrendingUp className="h-6 w-6 text-white" />
               </div>
-              <h3 className="text-xl font-bold mb-2">Support Your Artists</h3>
-              <p className="text-gray-600">
+              <h3 className="text-xl font-bold mb-2 text-black">Support Your Artists</h3>
+              <p className="text-black">
                 Direct monetization means your support goes straight to artists. Buy tickets,
                 subscribe, and help creators thrive.
               </p>
@@ -113,16 +113,16 @@ export default function Home() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">How It Works</h2>
-            <p className="text-xl text-gray-600">Join the future of music fandom</p>
+            <h2 className="text-4xl font-bold mb-4 text-black">How It Works</h2>
+            <p className="text-xl text-black">Join the future of music fandom</p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="bg-gradient-to-br from-primary-500 to-accent-500 w-16 h-16 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">
                 1
               </div>
-              <h3 className="text-xl font-bold mb-2">Discover Artists</h3>
-              <p className="text-gray-600">
+              <h3 className="text-xl font-bold mb-2 text-black">Discover Artists</h3>
+              <p className="text-black">
                 Browse upcoming live events and find your favorite artists or discover new ones.
               </p>
             </div>
@@ -130,8 +130,8 @@ export default function Home() {
               <div className="bg-gradient-to-br from-primary-500 to-accent-500 w-16 h-16 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">
                 2
               </div>
-              <h3 className="text-xl font-bold mb-2">Join Live Events</h3>
-              <p className="text-gray-600">
+              <h3 className="text-xl font-bold mb-2 text-black">Join Live Events</h3>
+              <p className="text-black">
                 Purchase tickets or use your subscription to access interactive concerts and
                 exclusive sessions.
               </p>
@@ -140,8 +140,8 @@ export default function Home() {
               <div className="bg-gradient-to-br from-primary-500 to-accent-500 w-16 h-16 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">
                 3
               </div>
-              <h3 className="text-xl font-bold mb-2">Connect & Engage</h3>
-              <p className="text-gray-600">
+              <h3 className="text-xl font-bold mb-2 text-black">Connect & Engage</h3>
+              <p className="text-black">
                 React in real-time, vote on setlists, chat with fans, and access exclusive
                 backstage content.
               </p>

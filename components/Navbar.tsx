@@ -48,7 +48,7 @@ export default function Navbar() {
                 <div className="h-8 w-8 rounded-full bg-gradient-to-br from-primary-400 to-accent-400 flex items-center justify-center">
                   <User className="h-4 w-4 text-white" />
                 </div>
-                <span className="text-sm font-medium">Superfan</span>
+                <span className="text-sm font-medium text-black">Superfan</span>
               </button>
               {isUserMenuOpen && (
                 <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-2">
