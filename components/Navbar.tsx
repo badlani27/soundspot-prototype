@@ -52,14 +52,14 @@ export default function Navbar() {
               </button>
               {isUserMenuOpen && (
                 <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-2">
-                  <Link href="/profile" className="block px-4 py-2 text-sm hover:bg-gray-100">
+                  <Link href="/profile" className="block px-4 py-2 text-sm text-gray-900 hover:bg-gray-100">
                     Profile
                   </Link>
-                  <Link href="/settings" className="block px-4 py-2 text-sm hover:bg-gray-100">
+                  <Link href="/settings" className="block px-4 py-2 text-sm text-gray-900 hover:bg-gray-100">
                     Settings
                   </Link>
-                  <button className="w-full text-left px-4 py-2 text-sm hover:bg-gray-100 flex items-center space-x-2">
-                    <LogOut className="h-4 w-4" />
+                  <button className="w-full text-left px-4 py-2 text-sm text-gray-900 hover:bg-gray-100 flex items-center space-x-2">
+                    <LogOut className="h-4 w-4 text-gray-900" />
                     <span>Sign Out</span>
                   </button>
                 </div>
@@ -78,23 +78,23 @@ export default function Navbar() {
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="md:hidden p-2 rounded-lg hover:bg-gray-100"
           >
-            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            {isMenuOpen ? <X className="h-6 w-6 text-gray-900" /> : <Menu className="h-6 w-6 text-gray-900" />}
           </button>
         </div>
 
         {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="md:hidden py-4 space-y-2 border-t border-gray-200">
-            <Link href="/events" className="block px-4 py-2 hover:bg-gray-100 rounded">
+            <Link href="/events" className="block px-4 py-2 text-gray-900 hover:bg-gray-100 rounded">
               Live Events
             </Link>
-            <Link href="/artists" className="block px-4 py-2 hover:bg-gray-100 rounded">
+            <Link href="/artists" className="block px-4 py-2 text-gray-900 hover:bg-gray-100 rounded">
               Artists
             </Link>
-            <Link href="/community" className="block px-4 py-2 hover:bg-gray-100 rounded">
+            <Link href="/community" className="block px-4 py-2 text-gray-900 hover:bg-gray-100 rounded">
               Community
             </Link>
-            <Link href="/dashboard" className="block px-4 py-2 hover:bg-gray-100 rounded">
+            <Link href="/dashboard" className="block px-4 py-2 text-gray-900 hover:bg-gray-100 rounded">
               Dashboard
             </Link>
             <Link

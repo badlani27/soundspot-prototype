@@ -47,8 +47,8 @@ export default function ArtistsPage() {
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="mb-12">
-          <h1 className="text-4xl font-bold mb-4">Featured Artists</h1>
-          <p className="text-xl text-gray-600">Discover and connect with your favorite artists</p>
+          <h1 className="text-4xl font-bold mb-4 text-black">Featured Artists</h1>
+          <p className="text-xl text-black">Discover and connect with your favorite artists</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -60,31 +60,31 @@ export default function ArtistsPage() {
             >
               <div className={`${artist.image} h-48 relative`}>
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition flex items-center justify-center">
-                  <Music className="h-16 w-16 text-white opacity-80" />
+                  <Music className="h-16 w-16 text-black opacity-80" />
                 </div>
                 {artist.isOnline && (
-                  <div className="absolute top-4 right-4 bg-green-500 text-white px-2 py-1 rounded-full text-xs flex items-center space-x-1">
+                  <div className="absolute top-4 right-4 bg-green-500 text-black px-2 py-1 rounded-full text-xs flex items-center space-x-1">
                     <div className="w-2 h-2 bg-white rounded-full pulse-live"></div>
-                    <span>Live</span>
+                    <span className="text-black">Live</span>
                   </div>
                 )}
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-1">{artist.name}</h3>
-                <p className="text-gray-600 text-sm mb-4">{artist.genre}</p>
+                <h3 className="text-xl font-bold mb-1 text-black">{artist.name}</h3>
+                <p className="text-black text-sm mb-4">{artist.genre}</p>
                 <div className="space-y-2">
                   <div className="flex items-center justify-between text-sm">
-                    <div className="flex items-center space-x-1 text-gray-600">
+                    <div className="flex items-center space-x-1 text-black">
                       <Users className="h-4 w-4" />
-                      <span>{artist.fans} fans</span>
+                      <span className="text-black">{artist.fans} fans</span>
                     </div>
-                    <div className="flex items-center space-x-1 text-gray-600">
+                    <div className="flex items-center space-x-1 text-black">
                       <TrendingUp className="h-4 w-4" />
-                      <span>{artist.events} events</span>
+                      <span className="text-black">{artist.events} events</span>
                     </div>
                   </div>
                 </div>
-                <button className="w-full mt-4 bg-primary-500 text-white py-2 rounded-lg hover:bg-primary-600 transition">
+                <button className="w-full mt-4 bg-primary-500 text-black py-2 rounded-lg hover:bg-primary-600 transition">
                   Follow
                 </button>
               </div>

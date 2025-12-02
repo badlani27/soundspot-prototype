@@ -89,8 +89,8 @@ export default function CommunityPage() {
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="mb-8">
-          <h1 className="text-3xl font-bold mb-2">Your Communities</h1>
-          <p className="text-gray-600">Connect with artists and fellow superfans</p>
+          <h1 className="text-3xl font-bold mb-2 text-black">Your Communities</h1>
+          <p className="text-black">Connect with artists and fellow superfans</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -98,8 +98,8 @@ export default function CommunityPage() {
           <div className="lg:col-span-1 space-y-4">
             <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-4">
               <div className="flex items-center justify-between mb-4">
-                <h2 className="font-semibold">Artists</h2>
-                <Search className="h-5 w-5 text-gray-600" />
+                <h2 className="font-semibold text-black">Artists</h2>
+                <Search className="h-5 w-5 text-black" />
               </div>
               <div className="space-y-2">
                 {artists.map(artist => (
@@ -113,7 +113,7 @@ export default function CommunityPage() {
                     }`}
                   >
                     <div className="relative">
-                      <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary-400 to-accent-400 flex items-center justify-center text-white font-semibold">
+                      <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary-400 to-accent-400 flex items-center justify-center text-black font-semibold">
                         {artist.avatar}
                       </div>
                       {artist.isOnline && (
@@ -122,14 +122,14 @@ export default function CommunityPage() {
                     </div>
                     <div className="flex-1 text-left">
                       <div className="flex items-center justify-between">
-                        <h3 className="font-semibold">{artist.name}</h3>
+                        <h3 className="font-semibold text-black">{artist.name}</h3>
                         {artist.unread > 0 && (
-                          <span className="bg-primary-500 text-white text-xs px-2 py-1 rounded-full">
+                          <span className="bg-primary-500 text-black text-xs px-2 py-1 rounded-full">
                             {artist.unread}
                           </span>
                         )}
                       </div>
-                      <p className="text-sm text-gray-500">Active now</p>
+                      <p className="text-sm text-black">Active now</p>
                     </div>
                   </button>
                 ))}
@@ -138,31 +138,31 @@ export default function CommunityPage() {
 
             {/* Backstage Feed */}
             <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-4">
-              <h2 className="font-semibold mb-4">Backstage Feed</h2>
+              <h2 className="font-semibold mb-4 text-black">Backstage Feed</h2>
               <div className="space-y-3">
                 {backstageFeed.map(item => (
                   <div key={item.id} className="p-3 border border-gray-200 rounded-lg hover:bg-gray-50 transition cursor-pointer">
                     <div className="flex items-start space-x-3">
                       {item.type === 'voice' && (
                         <div className="p-2 bg-primary-100 rounded-lg">
-                          <Mic className="h-4 w-4 text-primary-600" />
+                          <Mic className="h-4 w-4 text-black" />
                         </div>
                       )}
                       {item.type === 'text' && (
                         <div className="p-2 bg-accent-100 rounded-lg">
-                          <MessageCircle className="h-4 w-4 text-accent-600" />
+                          <MessageCircle className="h-4 w-4 text-black" />
                         </div>
                       )}
                       {item.type === 'image' && (
                         <div className="p-2 bg-purple-100 rounded-lg">
-                          <ImageIcon className="h-4 w-4 text-purple-600" />
+                          <ImageIcon className="h-4 w-4 text-black" />
                         </div>
                       )}
                       <div className="flex-1">
-                        <h3 className="font-semibold text-sm mb-1">{item.title}</h3>
-                        {item.preview && <p className="text-xs text-gray-500">{item.preview}</p>}
-                        {item.duration && <p className="text-xs text-gray-500">{item.duration}</p>}
-                        <p className="text-xs text-gray-500 mt-1">{item.time}</p>
+                        <h3 className="font-semibold text-sm mb-1 text-black">{item.title}</h3>
+                        {item.preview && <p className="text-xs text-black">{item.preview}</p>}
+                        {item.duration && <p className="text-xs text-black">{item.duration}</p>}
+                        <p className="text-xs text-black mt-1">{item.time}</p>
                       </div>
                     </div>
                   </div>
@@ -178,18 +178,18 @@ export default function CommunityPage() {
               <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-3">
                   <div className="relative">
-                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary-400 to-accent-400 flex items-center justify-center text-white font-semibold">
+                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary-400 to-accent-400 flex items-center justify-center text-black font-semibold">
                       SC
                     </div>
                     <div className="absolute bottom-0 right-0 w-3 h-3 bg-green-500 rounded-full border-2 border-white"></div>
                   </div>
                   <div>
-                    <h2 className="font-semibold">Sarah Chen</h2>
-                    <p className="text-sm text-gray-500">Active now</p>
+                    <h2 className="font-semibold text-black">Sarah Chen</h2>
+                    <p className="text-sm text-black">Active now</p>
                   </div>
                 </div>
                 <button className="p-2 hover:bg-gray-100 rounded-lg transition">
-                  <Bell className="h-5 w-5 text-gray-600" />
+                  <Bell className="h-5 w-5 text-black" />
                 </button>
               </div>
             </div>
@@ -209,9 +209,9 @@ export default function CommunityPage() {
                   <div className={`flex-1 ${message.isArtist ? 'text-right' : ''}`}>
                     {!message.isArtist && (
                       <div className="flex items-center space-x-2 mb-1">
-                        <span className="font-semibold text-sm">{message.user}</span>
+                        <span className="font-semibold text-sm text-black">{message.user}</span>
                         {message.badge && (
-                          <span className="text-xs bg-gradient-to-r from-yellow-400 to-orange-500 px-2 py-0.5 rounded-full">
+                          <span className="text-xs bg-gradient-to-r from-yellow-400 to-orange-500 px-2 py-0.5 rounded-full text-black">
                             {message.badge}
                           </span>
                         )}
@@ -220,16 +220,16 @@ export default function CommunityPage() {
                     <div
                       className={`inline-block px-4 py-2 rounded-lg ${
                         message.isArtist
-                          ? 'bg-gradient-to-r from-primary-500 to-accent-500 text-white'
+                          ? 'bg-gradient-to-r from-primary-500 to-accent-500 text-black'
                           : 'bg-white border border-gray-200'
                       }`}
                     >
-                      <p className="text-sm">{message.text}</p>
+                      <p className="text-sm text-black">{message.text}</p>
                     </div>
-                    <p className="text-xs text-gray-500 mt-1">{message.time}</p>
+                    <p className="text-xs text-black mt-1">{message.time}</p>
                   </div>
                   {message.isArtist && (
-                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-primary-400 to-accent-400 flex-shrink-0 flex items-center justify-center text-white font-semibold text-xs">
+                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-primary-400 to-accent-400 flex-shrink-0 flex items-center justify-center text-black font-semibold text-xs">
                       SC
                     </div>
                   )}
@@ -241,10 +241,10 @@ export default function CommunityPage() {
             <div className="p-4 border-t border-gray-200">
               <div className="flex items-center space-x-2">
                 <button className="p-2 hover:bg-gray-100 rounded-lg transition">
-                  <ImageIcon className="h-5 w-5 text-gray-600" />
+                  <ImageIcon className="h-5 w-5 text-black" />
                 </button>
                 <button className="p-2 hover:bg-gray-100 rounded-lg transition">
-                  <Mic className="h-5 w-5 text-gray-600" />
+                  <Mic className="h-5 w-5 text-black" />
                 </button>
                 <input
                   type="text"
@@ -256,12 +256,12 @@ export default function CommunityPage() {
                 />
                 <button
                   onClick={sendMessage}
-                  className="p-2 bg-gradient-to-r from-primary-500 to-accent-500 text-white rounded-lg hover:shadow-lg transition"
+                  className="p-2 bg-gradient-to-r from-primary-500 to-accent-500 text-black rounded-lg hover:shadow-lg transition"
                 >
-                  <Send className="h-5 w-5" />
+                  <Send className="h-5 w-5 text-black" />
                 </button>
               </div>
-              <p className="text-xs text-gray-500 mt-2 text-center">
+              <p className="text-xs text-black mt-2 text-center">
                 It feels just like we're texting each other
               </p>
             </div>

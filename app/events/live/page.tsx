@@ -73,7 +73,7 @@ export default function LiveEventPage() {
   const totalVotes = pollVotes.optionA + pollVotes.optionB
 
   return (
-    <div className="min-h-screen bg-gray-900 text-gray-100 relative overflow-hidden">
+    <div className="min-h-screen bg-gray-900 text-white relative overflow-hidden">
       {/* Dynamic Background */}
       <div className={`absolute inset-0 bg-gradient-to-br ${backgroundColor} opacity-30 transition-all duration-1000`}></div>
       
@@ -86,19 +86,19 @@ export default function LiveEventPage() {
             <div className="flex items-center space-x-4">
               <div className="flex items-center space-x-2">
                 <div className="w-3 h-3 bg-red-500 rounded-full pulse-live"></div>
-                <span className="text-sm font-semibold text-gray-100">LIVE</span>
+                <span className="text-sm font-semibold text-white">LIVE</span>
               </div>
-              <div className="flex items-center space-x-2 text-sm text-gray-200">
-                <Users className="h-4 w-4" />
-                <span>{viewers.toLocaleString()} watching</span>
+              <div className="flex items-center space-x-2 text-sm text-white">
+                <Users className="h-4 w-4 text-white" />
+                <span className="text-white">{viewers.toLocaleString()} watching</span>
               </div>
             </div>
             <div className="flex items-center space-x-2">
               <button
                 onClick={() => setIsMuted(!isMuted)}
-                className="p-2 rounded-full hover:bg-gray-700/50 transition text-gray-200"
+                className="p-2 rounded-full hover:bg-gray-700/50 transition text-white"
               >
-                {isMuted ? <VolumeX className="h-5 w-5" /> : <Volume2 className="h-5 w-5" />}
+                {isMuted ? <VolumeX className="h-5 w-5 text-white" /> : <Volume2 className="h-5 w-5 text-white" />}
               </button>
             </div>
           </div>
@@ -110,8 +110,8 @@ export default function LiveEventPage() {
                   <div className="w-32 h-32 mx-auto mb-4 rounded-full bg-gradient-to-br from-primary-400 to-accent-400 flex items-center justify-center">
                   <Play className="h-16 w-16 text-gray-900" />
                 </div>
-                <h2 className="text-2xl font-bold mb-2 text-gray-100">Sarah Chen Live Session</h2>
-                <p className="text-gray-300">Acoustic Performance</p>
+                <h2 className="text-2xl font-bold mb-2 text-white">Sarah Chen Live Session</h2>
+                <p className="text-white">Acoustic Performance</p>
               </div>
             </div>
             
@@ -135,10 +135,10 @@ export default function LiveEventPage() {
             <motion.div
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
-              className="absolute top-4 right-4 bg-gradient-to-r from-yellow-400 to-orange-500 px-4 py-2 rounded-lg flex items-center space-x-2 text-gray-900"
+              className="absolute top-4 right-4 bg-gradient-to-r from-yellow-400 to-orange-500 px-4 py-2 rounded-lg flex items-center space-x-2 text-white"
             >
-              <Award className="h-5 w-5" />
-              <span className="font-semibold">500 Reactions Milestone!</span>
+              <Award className="h-5 w-5 text-white" />
+              <span className="font-semibold text-white">500 Reactions Milestone!</span>
             </motion.div>
           </div>
 
@@ -149,7 +149,7 @@ export default function LiveEventPage() {
               animate={{ opacity: 1, y: 0 }}
               className="bg-gray-800/90 backdrop-blur-md rounded-xl p-6 mb-4 border border-gray-700"
             >
-              <h3 className="text-lg font-bold mb-4 text-gray-100">Which song should I perform next?</h3>
+              <h3 className="text-lg font-bold mb-4 text-white">Which song should I perform next?</h3>
               <div className="space-y-3">
                 <button
                   onClick={() => votePoll('A')}
@@ -158,12 +158,12 @@ export default function LiveEventPage() {
                     hasVoted
                       ? 'bg-gray-700/50'
                       : 'bg-gray-700/30 hover:bg-gray-700/50 cursor-pointer'
-                  } text-gray-100`}
+                  } text-white`}
                 >
                   <div className="flex justify-between items-center">
-                    <span>Option A: Midnight Dreams</span>
+                    <span className="text-white">Option A: Midnight Dreams</span>
                     {hasVoted && (
-                      <span className="text-sm">
+                      <span className="text-sm text-white">
                         {totalVotes > 0 ? Math.round((pollVotes.optionA / totalVotes) * 100) : 0}%
                       </span>
                     )}
@@ -186,12 +186,12 @@ export default function LiveEventPage() {
                     hasVoted
                       ? 'bg-gray-700/50'
                       : 'bg-gray-700/30 hover:bg-gray-700/50 cursor-pointer'
-                  } text-gray-100`}
+                  } text-white`}
                 >
                   <div className="flex justify-between items-center">
-                    <span>Option B: City Lights</span>
+                    <span className="text-white">Option B: City Lights</span>
                     {hasVoted && (
-                      <span className="text-sm">
+                      <span className="text-sm text-white">
                         {totalVotes > 0 ? Math.round((pollVotes.optionB / totalVotes) * 100) : 0}%
                       </span>
                     )}
@@ -218,36 +218,36 @@ export default function LiveEventPage() {
                 sendReaction('❤️')
                 setBackgroundColor('from-red-500 via-pink-500 to-purple-500')
               }}
-              className="flex-1 bg-gray-800/80 hover:bg-gray-700/80 backdrop-blur-md px-6 py-3 rounded-lg transition flex items-center justify-center space-x-2 text-gray-100 border border-gray-700"
+              className="flex-1 bg-gray-800/80 hover:bg-gray-700/80 backdrop-blur-md px-6 py-3 rounded-lg transition flex items-center justify-center space-x-2 text-white border border-gray-700"
             >
-              <Heart className="h-5 w-5" />
-              <span>Love</span>
+              <Heart className="h-5 w-5 text-white" />
+              <span className="text-white">Love</span>
             </button>
             <button
               onClick={() => {
                 sendReaction('🔥')
                 setBackgroundColor('from-orange-500 via-red-500 to-yellow-500')
               }}
-              className="flex-1 bg-gray-800/80 hover:bg-gray-700/80 backdrop-blur-md px-6 py-3 rounded-lg transition flex items-center justify-center space-x-2 text-gray-100 border border-gray-700"
+              className="flex-1 bg-gray-800/80 hover:bg-gray-700/80 backdrop-blur-md px-6 py-3 rounded-lg transition flex items-center justify-center space-x-2 text-white border border-gray-700"
             >
-              <span className="text-xl">🔥</span>
-              <span>Fire</span>
+              <span className="text-xl text-white">🔥</span>
+              <span className="text-white">Fire</span>
             </button>
             <button
               onClick={() => {
                 sendReaction('🎉')
                 setBackgroundColor('from-yellow-500 via-green-500 to-blue-500')
               }}
-              className="flex-1 bg-gray-800/80 hover:bg-gray-700/80 backdrop-blur-md px-6 py-3 rounded-lg transition flex items-center justify-center space-x-2 text-gray-100 border border-gray-700"
+              className="flex-1 bg-gray-800/80 hover:bg-gray-700/80 backdrop-blur-md px-6 py-3 rounded-lg transition flex items-center justify-center space-x-2 text-white border border-gray-700"
             >
-              <span className="text-xl">🎉</span>
-              <span>Celebrate</span>
+              <span className="text-xl text-white">🎉</span>
+              <span className="text-white">Celebrate</span>
             </button>
             <button
               onClick={() => setShowPoll(!showPoll)}
-              className="px-6 py-3 bg-gradient-to-r from-primary-500 to-accent-500 rounded-lg hover:shadow-lg transition text-gray-900"
+              className="px-6 py-3 bg-gradient-to-r from-primary-500 to-accent-500 rounded-lg hover:shadow-lg transition text-white"
             >
-              <TrendingUp className="h-5 w-5" />
+              <TrendingUp className="h-5 w-5 text-white" />
             </button>
           </div>
         </div>
@@ -255,9 +255,9 @@ export default function LiveEventPage() {
           {/* Chat Sidebar */}
         <div className="w-full lg:w-96 bg-gray-800/80 backdrop-blur-md border-l border-gray-700 flex flex-col">
           <div className="p-4 border-b border-gray-700">
-            <h3 className="text-lg font-bold flex items-center space-x-2 text-gray-100">
-              <MessageCircle className="h-5 w-5" />
-              <span>Live Chat</span>
+            <h3 className="text-lg font-bold flex items-center space-x-2 text-white">
+              <MessageCircle className="h-5 w-5 text-white" />
+              <span className="text-white">Live Chat</span>
             </h3>
           </div>
           <div className="flex-1 overflow-y-auto p-4 space-y-3">
@@ -266,15 +266,15 @@ export default function LiveEventPage() {
                 <div className="w-8 h-8 rounded-full bg-gradient-to-br from-primary-400 to-accent-400 flex-shrink-0"></div>
                 <div className="flex-1">
                   <div className="flex items-center space-x-2 mb-1">
-                    <span className="font-semibold text-sm text-gray-100">{message.user}</span>
+                    <span className="font-semibold text-sm text-white">{message.user}</span>
                     {message.badge && (
-                      <span className="text-xs bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 px-2 py-0.5 rounded-full font-semibold">
+                      <span className="text-xs bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-2 py-0.5 rounded-full font-semibold">
                         {message.badge}
                       </span>
                     )}
-                    <span className="text-xs text-gray-400">{message.time}</span>
+                    <span className="text-xs text-white">{message.time}</span>
                   </div>
-                  <p className="text-sm text-gray-200">{message.text}</p>
+                  <p className="text-sm text-white">{message.text}</p>
                 </div>
               </div>
             ))}
@@ -288,13 +288,13 @@ export default function LiveEventPage() {
                 onChange={e => setNewMessage(e.target.value)}
                 onKeyPress={e => e.key === 'Enter' && sendMessage()}
                 placeholder="Type a message..."
-                className="flex-1 bg-gray-700/50 border border-gray-600 rounded-lg px-4 py-2 text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500"
+                className="flex-1 bg-gray-700/50 border border-gray-600 rounded-lg px-4 py-2 text-white placeholder-white focus:outline-none focus:ring-2 focus:ring-primary-500"
               />
               <button
                 onClick={sendMessage}
                 className="p-2 bg-gradient-to-r from-primary-500 to-accent-500 rounded-lg hover:shadow-lg transition"
               >
-                <Send className="h-5 w-5" />
+                <Send className="h-5 w-5 text-white" />
               </button>
             </div>
           </div>

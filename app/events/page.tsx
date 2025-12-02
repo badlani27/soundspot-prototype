@@ -60,7 +60,7 @@ export default function EventsPage() {
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="mb-12">
-          <h1 className="text-4xl font-bold mb-4">Upcoming Live Events</h1>
+          <h1 className="text-4xl font-bold mb-4 text-black">Upcoming Live Events</h1>
           <p className="text-xl text-gray-600">Join interactive concerts and exclusive artist sessions</p>
         </div>
 
@@ -68,7 +68,7 @@ export default function EventsPage() {
         <div className="mb-12">
           <h2 className="text-2xl font-bold mb-6 flex items-center space-x-2">
             <div className="w-3 h-3 bg-red-500 rounded-full pulse-live"></div>
-            <span>Live Now</span>
+            <span className="text-black">Live Now</span>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {events
@@ -90,19 +90,19 @@ export default function EventsPage() {
                   </div>
                   <div className="p-6">
                     <div className="flex items-center justify-between mb-2">
-                      <h3 className="text-xl font-bold">{event.title}</h3>
+                      <h3 className="text-xl font-bold text-black">{event.title}</h3>
                       <Heart className="h-5 w-5 text-gray-600 hover:text-red-500 transition" />
                     </div>
-                    <p className="text-gray-600 mb-4">{event.artist}</p>
+                    <p className="text-gray-600 mb-4 text-black">{event.artist}</p>
                     <p className="text-sm text-gray-500 mb-4">{event.description}</p>
                     <div className="flex items-center justify-between text-sm text-gray-600 mb-4">
                       <div className="flex items-center space-x-1">
                         <Users className="h-4 w-4" />
-                        <span>{event.attendees} watching</span>
+                        <span className="text-black">{event.attendees} watching</span>
                       </div>
                       <div className="flex items-center space-x-1">
                         <DollarSign className="h-4 w-4" />
-                        <span>${event.price}</span>
+                        <span className="text-black">${event.price}</span>
                       </div>
                     </div>
                     <button className="w-full bg-gradient-to-r from-primary-500 to-accent-500 text-white py-2 rounded-lg hover:shadow-lg transition">
@@ -116,7 +116,7 @@ export default function EventsPage() {
 
         {/* Upcoming Events */}
         <div>
-          <h2 className="text-2xl font-bold mb-6">Upcoming Events</h2>
+          <h2 className="text-2xl font-bold mb-6 text-black">Upcoming Events</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {events
               .filter(e => !e.isLive)
@@ -133,27 +133,27 @@ export default function EventsPage() {
                   </div>
                   <div className="p-6">
                     <div className="flex items-center justify-between mb-2">
-                      <h3 className="text-xl font-bold">{event.title}</h3>
+                      <h3 className="text-xl font-bold text-black">{event.title}</h3>
                       <Heart className="h-5 w-5 text-gray-600 hover:text-red-500 transition" />
                     </div>
-                    <p className="text-gray-600 mb-4">{event.artist}</p>
+                    <p className="text-gray-600 mb-4 text-black">{event.artist}</p>
                     <p className="text-sm text-gray-500 mb-4">{event.description}</p>
                     <div className="space-y-2 mb-4">
                       <div className="flex items-center space-x-2 text-sm text-gray-600">
                         <Calendar className="h-4 w-4" />
-                        <span>{format(new Date(event.date), 'MMM d, yyyy')}</span>
+                        <span className="text-black">{format(new Date(event.date), 'MMM d, yyyy')}</span>
                       </div>
                       <div className="flex items-center space-x-2 text-sm text-gray-600">
                         <Clock className="h-4 w-4" />
-                        <span>{event.time}</span>
+                        <span className="text-black">{event.time}</span>
                       </div>
                       <div className="flex items-center space-x-2 text-sm text-gray-600">
                         <Users className="h-4 w-4" />
-                        <span>{event.attendees} registered</span>
+                        <span className="text-black">{event.attendees} registered</span>
                       </div>
                     </div>
                     <div className="flex items-center justify-between">
-                      <span className="text-2xl font-bold">${event.price}</span>
+                      <span className="text-2xl font-bold text-black">${event.price}</span>
                       <button className="bg-primary-500 text-white px-6 py-2 rounded-lg hover:bg-primary-600 transition">
                         Get Ticket
                       </button>
